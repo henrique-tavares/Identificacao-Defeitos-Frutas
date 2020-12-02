@@ -15,9 +15,9 @@ debugging_mode = True  # Debbuging images
 
 try:
     mkdir(path.join(path.curdir, dest))
-    print(f"Pasta '{dest}' criada com sucesso!", end="\n\n")
+    print(f"Output folder: '{dest}' successfully created!", end="\n\n")
 except:
-    print(f"Pasta '{dest}' já existe.", end="\n\n")
+    print(f"Output folder: '{dest}' already exists.", end="\n\n")
 
 dest_length = len(listdir(path.join(path.curdir, dest)))
 
@@ -113,4 +113,4 @@ for dirpath, dirnames, filenames in walk(path.join(path.curdir, src)):
             plt.show()
 
         io.imsave(path.join(path.curdir, dest, f"img_{index:04}.png"), util.img_as_ubyte(new_img_eroded))
-        tqdm.write(f"{filename} processada em img_{index:04}.png com sucesso em {(finish - start):.1f}s")
+        tqdm.write(f"{filename} processed into img_{index:04}.png successfully within {(finish - start):.1f}s")
