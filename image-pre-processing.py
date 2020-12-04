@@ -8,8 +8,8 @@ from matplotlib import pyplot as plt
 from cv2 import erode
 from tqdm import tqdm
 
-src = "pequis-teste"  # Image source folder
-dest = "pequis"  # Processed images output folder
+src = "siriguelas-raw"  # Image source folder
+dest = "siriguelas"  # Processed images output folder
 
 debugging_mode = True  # Debbuging images
 
