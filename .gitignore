@@ -1,7 +1,10 @@
 # Source Images
 *.jpg
 *.JPG
+*.JPEG
 *.png
 
 # Output Images
 !pequis/*
+!abius/*
+!siriguelas/*
