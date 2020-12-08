@@ -8,10 +8,10 @@ from matplotlib import pyplot as plt
 from cv2 import erode
 from tqdm import tqdm
 
-src = "siriguelas-raw"  # Image source folder
-dest = "siriguelas"  # Processed images output folder
+src = "gabirobas-raw"  # Image source folder
+dest = "gabirobas"  # Processed images output folder
 
-debugging_mode = True  # Debbuging images
+debugging_mode = False  # Debbuging images
 
 try:
     mkdir(path.join(path.curdir, dest))
@@ -69,7 +69,7 @@ for dirpath, dirnames, filenames in walk(path.join(path.curdir, src)):
         init = np.array([r, c]).T
 
         contour = segmentation.active_contour(
-            inv_no_bg_img, init, alpha=0.1, beta=1, coordinates="rc", max_iterations=10000
+            inv_no_bg_img, init, alpha=0.1, beta=0.5, coordinates="rc", max_iterations=10000
         )
 
         mask = draw.polygon2mask((IMG_SIZE, IMG_SIZE), contour)
