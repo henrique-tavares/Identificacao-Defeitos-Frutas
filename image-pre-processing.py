@@ -8,12 +8,12 @@ from matplotlib import pyplot as plt
 from cv2 import erode
 from tqdm import tqdm
 
-src = path.join(path.curdir, "raw-images", "cajus-amarelos-4")  # Image source folder
-dest = path.join(path.curdir, "databases", "cajus-amarelos")  # Processed images output folder
+src = path.join(path.curdir, "raw-images", "siriguelas-2")  # Image source folder
+dest = path.join(path.curdir, "databases", "siriguelas")  # Processed images output folder
 
 debugging_mode = False  # Debbuging images
 
-contour_mode = "color"  # Use 'color' (slower but more accurate) or 'binary' (faster but less accurate)
+contour_mode = "binary"  # Use 'color' (slower but more accurate) or 'binary' (faster but less accurate)
 
 try:
     mkdir(path.join(path.curdir, dest))
@@ -117,5 +117,8 @@ for index, filename in tqdm(
 
         plt.show()
 
-    io.imsave(path.join(dest, f"img_{index:04}.png"), util.img_as_ubyte(processed_img))
-    tqdm.write(f"{filename} processed into img_{index:04}.png successfully within {(finish - start):.1f}s")
+        tqdm.write(f"{filename} processed within {(finish - start):.1f}s")
+
+    else:
+        io.imsave(path.join(dest, f"img_{index:04}.png"), util.img_as_ubyte(processed_img))
+        tqdm.write(f"{filename} processed into img_{index:04}.png successfully within {(finish - start):.1f}s")
