@@ -1,6 +1,6 @@
 from os import path, listdir
 
-fruit_type = "cajus-vermelhos"
+fruit_type = "pequis"
 
 filenames = listdir(path.join(path.curdir, "..", "databases", fruit_type))
 filenames = list(filter(lambda filename: filename.endswith(".png"), filenames))
