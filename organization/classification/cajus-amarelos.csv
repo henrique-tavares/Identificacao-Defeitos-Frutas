@@ -1,7 +1,7 @@
 image,label
 img_0000.png,A
 img_0001.png,A
-img_0002.png,B
+img_0002.png,C
 img_0003.png,B
 img_0004.png,A
 img_0005.png,A
@@ -30,7 +30,7 @@ img_0027.png,B
 img_0028.png,B
 img_0029.png,A
 img_0030.png,B
-img_0031.png,B
+img_0031.png,C
 img_0032.png,A
 img_0033.png,A
 img_0034.png,B
@@ -70,8 +70,8 @@ img_0067.png,A
 img_0068.png,B
 img_0069.png,C
 img_0070.png,C
-img_0071.png,C
-img_0072.png,C
+img_0071.png,B
+img_0072.png,B
 img_0073.png,C
 img_0074.png,B
 img_0075.png,C
@@ -94,7 +94,7 @@ img_0091.png,B
 img_0092.png,A
 img_0093.png,C
 img_0094.png,C
-img_0095.png,B
+img_0095.png,C
 img_0096.png,C
 img_0097.png,A
 img_0098.png,A
