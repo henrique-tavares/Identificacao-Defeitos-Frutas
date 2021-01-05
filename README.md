@@ -3,4 +3,4 @@
  
  ---
  
-![pequi-flowchart](https://user-images.githubusercontent.com/51230543/101984512-9f2d3880-3c60-11eb-9086-5e3aad9d4f47.png)
+![pequi-flowchart](https://user-images.githubusercontent.com/51230543/103694721-35136500-4f7a-11eb-9a95-738cfa398b46.png)
