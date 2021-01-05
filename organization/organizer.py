@@ -2,7 +2,7 @@ from os import walk, mkdir, path, sep as os_sep
 from shutil import move
 import csv
 
-fruit_type = "abius"
+fruit_type = "siriguelas"
 
 with open(path.join(path.curdir, "classification", f"{fruit_type}.csv")) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
