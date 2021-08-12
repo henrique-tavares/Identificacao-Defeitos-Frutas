@@ -8,12 +8,12 @@ from matplotlib import pyplot as plt
 from cv2 import erode
 from tqdm import tqdm
 
-src = path.join(path.curdir, "raw-images", "siriguelas-2")  # Image source folder
-dest = path.join(path.curdir, "databases", "siriguelas")  # Processed images output folder
+src = path.join(path.curdir, "raw-images", "abius")  # Image source folder
+dest = path.join(path.curdir, "databases", "abius")  # Processed images output folder
 
-debugging_mode = False  # Debbuging images
+debugging_mode = True  # Debbuging images
 
-contour_mode = "binary"  # Use 'color' (slower but more accurate) or 'binary' (faster but less accurate)
+contour_mode = "color"  # Use 'color' (slower but more accurate) or 'binary' (faster but less accurate)
 
 try:
     mkdir(path.join(path.curdir, dest))
@@ -96,24 +96,28 @@ for index, filename in tqdm(
     finish = time()
 
     if debugging_mode:
-        fig, axes = plt.subplots(2, 2)
+        fig, axes = plt.subplots(2, 3)
         ax = axes.flatten()
 
-        ax[0].imshow(cropped_img, cmap="gray")
-        ax[0].plot(init[:, 1], init[:, 0], "--r", lw=2)
-        ax[0].plot(contour[:, 1], contour[:, 0], "-b", lw=2)
-        ax[0].set_title(f"Perimeter: {perimeter:.2f}")
+        ax[0].imshow(cropped_img)
         ax[0].set_axis_off()
 
         ax[1].imshow(pre_preocessed_img, cmap="gray")
         ax[1].set_axis_off()
 
-        ax[2].imshow(reduced_mask, cmap="gray")
-        ax[2].set_title(f"num of iterations: {iterations}")
+        ax[2].imshow(cropped_img)
+        ax[2].plot(init[:, 1], init[:, 0], "--r", lw=2)
+        ax[2].plot(contour[:, 1], contour[:, 0], "-b", lw=2)
         ax[2].set_axis_off()
 
-        ax[3].imshow(processed_img)
+        ax[3].imshow(mask, cmap="gray")
         ax[3].set_axis_off()
+
+        ax[4].imshow(reduced_mask, cmap="gray")
+        ax[4].set_axis_off()
+
+        ax[5].imshow(processed_img)
+        ax[5].set_axis_off()
 
         plt.show()
 
